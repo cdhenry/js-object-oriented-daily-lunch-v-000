@@ -28,11 +28,7 @@ class Customer {
   totalSpent() {
     return this.meals().reduce(function(sum, meal) {
       return sum + meal.price;
-    })
-    for (const meal of this.meals()){
-      total += meal.price;
-    }
-    return total;
+    }, 0);
   }
 }
 

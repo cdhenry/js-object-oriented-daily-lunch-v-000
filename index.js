@@ -99,7 +99,7 @@ class Meal {
 
   static byPrice() {
     return store.meals.slice().sort(function(mealA, mealB){
-      return mealB.price - mealA.price;
+      return mealA.price < mealB.price;
     });
   }
 }

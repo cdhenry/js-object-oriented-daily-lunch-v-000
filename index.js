@@ -59,9 +59,11 @@ class Employer {
 
   mealTotals() {
     let totals = {};
+    
     let meals = this.employees().map(employee => {
       return employee.meals();
     }).reduce((acc, val) => acc.concat(val), []);
+
     for (const meal of meals){
       if (meal.id in totals){
         totals[meal.id] += 1;

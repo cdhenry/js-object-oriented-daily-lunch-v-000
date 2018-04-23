@@ -26,7 +26,9 @@ class Customer {
   }
 
   totalSpent() {
-    let total = 0;
+    return this.meals().reduce(function(sum, meal) {
+      return sum + meal.price;
+    })
     for (const meal of this.meals()){
       total += meal.price;
     }

@@ -101,12 +101,10 @@ class Meal {
 }
 
 class Delivery {
-  constructor(meal, customer) {
+  constructor(meal = {}, customer = {}) {
     this.id = ++deliveryId;
-    if (meal && customer){
-      this.mealId = meal.id;
-      this.customerId = customer.id;
-    }
+    this.mealId = meal.id;
+    this.customerId = customer.id;
     store.deliveries.push(this);
   }
 

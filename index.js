@@ -6,12 +6,10 @@ let mealId = 0;
 let deliveryId = 0;
 
 class Customer {
-  constructor(name, employer) {
+  constructor(name, employer = {}) {
     this.id = ++customerId;
     this.name = name;
-    if (employer){
-      this.employerId = employer.id;
-    }
+    this.employerId = employer.id;
     store.customers.push(this);
   }
 

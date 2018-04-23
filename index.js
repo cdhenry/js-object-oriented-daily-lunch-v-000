@@ -59,7 +59,7 @@ class Employer {
 
   mealTotals() {
     let totals = {};
-    
+
     let meals = this.employees().map(employee => {
       return employee.meals();
     }).reduce((acc, val) => acc.concat(val), []);
@@ -71,6 +71,7 @@ class Employer {
         totals[meal.id] = 1;
       }
     }
+    
     return totals;
   }
 }
